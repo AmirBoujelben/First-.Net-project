@@ -1,0 +1,31 @@
+﻿@model TP3.Models.Concert
+<div class="container mt-5">
+    <h1 class="mb-4">Edit the Concert informations</h1>
+    <form method="post" class="row g-3">
+        <div class="col-md-6">
+            <label for="Title" class="form-label">Title</label>
+            <input id="Title" name="Title" class="form-control" placeholder="@Model.Title" />
+        </div>
+        <div class="col-md-6">
+            <label for="Artist" class="form-label">Artist</label>
+            <input id="Artist" name="Artist" class="form-control" placeholder="@Model.Artist" />
+        </div>
+        <div class="col-md-6">
+            <label for="Date" class="form-label">Date</label>
+            <input id="Date" name="Date" type="date" class="form-control" placeholder="@Model.Date" />
+        </div>
+        <div class="col-md-6">
+            <label for="Location" class="form-label">Location</label>
+            <input id="Location" name="Location" class="form-control" placeholder="@Model.Location" />
+        </div>
+        <div class="col-md-6">
+            <label for="TicketPrice" class="form-label">Price</label>
+            <input id="TicketPrice" name="TicketPrice" type="number" step="0.01" class="form-control" placeholder="@Model.TicketPrice" />
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-success" href="/Concerts">Edit Concert</button>
+            <a class="btn btn-secondary" href="/Concerts">Cancel</a>
+        </div>
+    </form>
+</div>
+

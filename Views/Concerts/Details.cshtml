@@ -1,0 +1,11 @@
+﻿@model TP3.Models.Concert
+<div class="container mt-5">
+    <h1 class="mb-4">@Model.Title</h1>
+    <ul class="list-group mb-4">
+        <li class="list-group-item"><strong>Artist:</strong> @Model.Artist</li>
+        <li class="list-group-item"><strong>Date:</strong> @Model.Date.ToShortDateString()</li>
+        <li class="list-group-item"><strong>Location:</strong> @Model.Location</li>
+        <li class="list-group-item"><strong>Price:</strong> @Model.TicketPrice.ToString("C")</li>
+    </ul>
+    <a class="btn btn-secondary" href="/Concerts">Back to List</a>
+</div>

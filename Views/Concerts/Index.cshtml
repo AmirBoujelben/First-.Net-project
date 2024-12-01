@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TP3.Models.Concert>
+<div class="container mt-5">
+    <h1 class="mb-4">Carthage Concerts</h1>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var concert in Model)
+            {
+                <tr>
+                    <td>@concert.Title</td>
+                    <td>@concert.Artist</td>
+                    <td>@concert.Date.ToShortDateString()</td>
+                    <td>
+                        <a class="btn btn-success btn-sm" href="/Concerts/Details/@concert.Id">Details</a>
+                        <a class="btn btn-warning btn-sm" href="/Concerts/Edit/@concert.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Concerts/Delete/@concert.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="/Concerts/Create">Add New Concert</a>
+</div>
